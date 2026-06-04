@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRC 10034 Gammaland Robotics | 官方網站</title>
+  <meta name="description" content="歡迎光臨 FRC 10034 Gammaland 機器人隊伍官方網站！在這裡，您可以了解我們的團隊歷史、歷屆機器人設計（如 Glacier King）、活動精彩照片，以及我們的合作贊助夥伴。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Header & Navbar -->
+  <header class="navbar" id="site-header">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo-link" id="nav-logo-link">
+        <img src="logo.jpg" alt="Gammaland Logo" class="nav-logo-img" id="nav-logo-img">
+        <h1 class="nav-brand" id="nav-brand">FRC <span>10034</span></h1>
+      </a>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="切換選單">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#home" class="nav-item active" id="nav-link-home">首頁</a></li>
+          <li><a href="#about" class="nav-item" id="nav-link-about">團隊介紹</a></li>
+          <li><a href="#robot" class="nav-item" id="nav-link-robot">機器人技術</a></li>
+          <li><a href="#gallery" class="nav-item" id="nav-link-gallery">活動照片</a></li>
+          <li><a href="#admin" class="nav-item" id="nav-link-admin">管理後台</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content">
+
+    <!-- PAGE: HOME -->
+    <section id="page-home" class="page-section">
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="hero-team-num" id="hero-team-num">FRC TEAM #10034</span>
+            <h2 class="hero-title" id="hero-title">Gammaland</h2>
+            <p class="hero-motto" id="hero-motto">載入中...</p>
+            <div class="hero-btns">
+              <a href="#about" class="btn btn-primary" id="hero-btn-about">探索團隊</a>
+              <a href="#robot" class="btn btn-secondary" id="hero-btn-robot">機器人規格</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-logo-container">
+              <img src="logo.jpg" alt="Gammaland Logo" class="hero-logo-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Latest News Section -->
+      <div class="home-section">
+        <h2 class="section-title">最新公告</h2>
+        <div class="news-grid" id="home-news-grid">
+          <!-- News cards will be dynamically inserted here -->
+        </div>
+      </div>
+
+      <!-- Sponsors Section -->
+      <div class="home-section">
+        <h2 class="section-title">合作夥伴與贊助商</h2>
+        <div class="sponsor-tiers-container" id="home-sponsors-container">
+          <!-- Sponsor tiers and cards will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PAGE: ABOUT -->
+    <section id="page-about" class="page-section" style="display: none;">
+      <div class="about-hero">
+        <h2 class="section-title">關於 Gammaland</h2>
+        <div class="about-intro-grid">
+          <div class="glass-card">
+            <p id="about-description-text" style="font-size: 1.1rem; text-align: left; text-justify: inter-word;">
+              載入中...
+            </p>
+          </div>
+          <div class="about-stat-grid">
+            <div class="glass-card about-stat-card">
+              <div class="about-stat-num" id="stat-founded">2024</div>
+              <div class="about-stat-label">成立年份</div>
+            </div>
+            <div class="glass-card about-stat-card">
+              <div class="about-stat-num" id="stat-members">20+</div>
+              <div class="about-stat-label">團員人數</div>
+            </div>
+            <div class="glass-card about-stat-card">
+              <div class="about-stat-num" id="stat-sponsors">5+</div>
+              <div class="about-stat-label">贊助夥伴</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subteam Section -->
+      <div class="home-section">
+        <h2 class="section-title">團隊分組</h2>
+        <div class="subteams-grid">
+          <div class="glass-card subteam-card">
+            <div class="subteam-icon">🛠️</div>
+            <h3>機構設計組 (Mechanical)</h3>
+            <p>負責機器人的實體結構設計、加工裝配與傳動系統維護。團員們需精確掌握材料特性與加工精度，確保機器人能在高強度的對抗賽中堅不可摧。</p>
+          </div>
+          <div class="glass-card subteam-card">
+            <div class="subteam-icon">💻</div>
+            <h3>軟體控制組 (Software)</h3>
+            <p>編寫機器人的自主導航路徑與遙控邏輯。利用 WPILib、Java 以及視覺感測器（如 Limelight）實現機器人全自動射擊、抓取與運動規劃。</p>
+          </div>
+          <div class="glass-card subteam-card">
+            <div class="subteam-icon">📐</div>
+            <h3>CAD 3D 建模組 (CAD)</h3>
+            <p>在實際加工前，使用 Onshape 或 SolidWorks 等建模軟體進行機器人整體的 3D 設計、重量配置模擬以及機構干涉審查，是團隊的研發核心。</p>
+          </div>
+          <div class="glass-card subteam-card">
+            <div class="subteam-icon">📢</div>
+            <h3>公關與推廣組 (Outreach)</h3>
+            <p>經營社群平台、接洽贊助企業、規劃社區 STEAM 教育推廣活動，並負責商業企劃書與宣傳影片的製作，是隊伍與社會溝通的重要橋樑。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Members Grid -->
+      <div class="home-section">
+        <h2 class="section-title">團隊成員</h2>
+        <div class="team-filters-container" id="team-filters">
+          <button class="filter-btn active" data-filter="all">全部成員</button>
+          <button class="filter-btn" data-filter="mechanical">機構設計</button>
+          <button class="filter-btn" data-filter="software">軟體控制</button>
+          <button class="filter-btn" data-filter="cad">CAD 建模</button>
+          <button class="filter-btn" data-filter="outreach">公關推廣</button>
+          <button class="filter-btn" data-filter="mentor">指導老師 / 導師</button>
+        </div>
+        <div class="team-grid" id="team-members-grid">
+          <!-- Member cards will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PAGE: ROBOT -->
+    <section id="page-robot" class="page-section" style="display: none;">
+      <div class="robot-container">
+        <h2 class="section-title">我們的機器人</h2>
+        
+        <div class="robot-grid">
+          <!-- Robot Media / Actions -->
+          <div class="robot-media">
+            <img src="logo.jpg" alt="Glacier King" class="robot-image-main" id="robot-main-img">
+            <div class="robot-links">
+              <a href="#" target="_blank" class="btn btn-secondary" id="robot-cad-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                瀏覽 3D CAD 模型
+              </a>
+              <a href="#" target="_blank" class="btn btn-primary" id="robot-code-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.4-1.9-1.4-1.9-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18.3 1 19.3 1.2 19.3 1.2c.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+                機器人控制代碼
+              </a>
+            </div>
+          </div>
+          
+          <!-- Robot Technical Specifications -->
+          <div class="robot-info glass-card">
+            <div class="robot-header">
+              <span class="robot-year-badge" id="robot-spec-year">2026</span>
+              <h3 class="robot-name" id="robot-spec-name">載入中...</h3>
+            </div>
+            <p class="robot-desc" id="robot-spec-desc">
+              載入中...
+            </p>
+            
+            <div class="robot-specs-table" id="robot-specs-list">
+              <!-- Spec rows will be dynamically inserted here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PAGE: GALLERY -->
+    <section id="page-gallery" class="page-section" style="display: none;">
+      <div class="gallery-container">
+        <h2 class="section-title">活動精彩照片</h2>
+        <div class="gallery-grid" id="gallery-items-grid">
+          <!-- Gallery photos will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PAGE: ADMIN -->
+    <section id="page-admin" class="page-section" style="display: none;">
+      <div class="admin-container">
+        <div class="admin-header-flex">
+          <div>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 0.5rem; display: inline-block;">後台管理系統</h2>
+            <p style="color: var(--text-muted);">在此處編輯網站內容，修改將即時套用在瀏覽器中。</p>
+          </div>
+          <div class="admin-actions">
+            <button class="btn btn-secondary" id="admin-export-btn">
+              ⬇️ 匯出資料檔案 (data.js)
+            </button>
+            <button class="btn btn-danger btn-small" id="admin-reset-btn" style="margin-left: 0.5rem;">
+              ⚠️ 重設為預設資料
+            </button>
+          </div>
+        </div>
+
+        <!-- Management Navigation Tabs -->
+        <div class="admin-tabs" id="admin-tabs">
+          <button class="admin-tab-btn active" data-tab="info">基本資訊</button>
+          <button class="admin-tab-btn" data-tab="sponsors">贊助商管理</button>
+          <button class="admin-tab-btn" data-tab="news">消息公告</button>
+          <button class="admin-tab-btn" data-tab="team">團員管理</button>
+          <button class="admin-tab-btn" data-tab="robot">機器人規格</button>
+          <button class="admin-tab-btn" data-tab="gallery">照片牆管理</button>
+        </div>
+
+        <!-- TAB CONTENT: Basic Info -->
+        <div class="admin-tab-panel glass-card" id="panel-info">
+          <h3>編輯團隊基本資訊</h3>
+          <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 1.5rem 0;">
+          <form id="form-team-info">
+            <div class="form-group">
+              <label for="info-name">隊伍名稱</label>
+              <input type="text" id="info-name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="info-number">隊伍編號</label>
+              <input type="text" id="info-number" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="info-motto">隊伍精神隊呼 (Motto)</label>
+              <input type="text" id="info-motto" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="info-founded">成立年份</label>
+              <input type="text" id="info-founded" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="info-about">團隊詳細介紹</label>
+              <textarea id="info-about" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="info-instagram">Instagram 連結</label>
+              <input type="url" id="info-instagram" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="info-github">GitHub 組織連結</label>
+              <input type="url" id="info-github" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="info-email">聯絡信箱 (Email)</label>
+              <input type="email" id="info-email" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">儲存基本資訊</button>
+          </form>
+        </div>
+
+        <!-- TAB CONTENT: Sponsors -->
+        <div class="admin-tab-panel" id="panel-sponsors" style="display: none;">
+          <div class="admin-header-flex" style="margin-bottom: 2rem;">
+            <h3>贊助商名單</h3>
+            <button class="btn btn-primary btn-small" id="admin-add-sponsor-btn">+ 新增贊助商</button>
+          </div>
+          <div class="admin-list glass-card" id="admin-sponsors-list">
+            <!-- Dynamic sponsor items -->
+          </div>
+        </div>
+
+        <!-- TAB CONTENT: News -->
+        <div class="admin-tab-panel" id="panel-news" style="display: none;">
+          <div class="admin-header-flex" style="margin-bottom: 2rem;">
+            <h3>最新公告</h3>
+            <button class="btn btn-primary btn-small" id="admin-add-news-btn">+ 發布新公告</button>
+          </div>
+          <div class="admin-list glass-card" id="admin-news-list">
+            <!-- Dynamic news items -->
+          </div>
+        </div>
+
+        <!-- TAB CONTENT: Team Members -->
+        <div class="admin-tab-panel" id="panel-team" style="display: none;">
+          <div class="admin-header-flex" style="margin-bottom: 2rem;">
+            <h3>成員與導師名冊</h3>
+            <button class="btn btn-primary btn-small" id="admin-add-member-btn">+ 新增成員/導師</button>
+          </div>
+          <div class="admin-list glass-card" id="admin-members-list">
+            <!-- Dynamic member items -->
+          </div>
+        </div>
+
+        <!-- TAB CONTENT: Robot Specs -->
+        <div class="admin-tab-panel glass-card" id="panel-robot" style="display: none;">
+          <h3>編輯機器人規格諸元</h3>
+          <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 1.5rem 0;">
+          <form id="form-robot-specs">
+            <div class="form-group">
+              <label for="robot-name-input">機器人名稱</label>
+              <input type="text" id="robot-name-input" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="robot-year-input">賽季年份</label>
+              <input type="text" id="robot-year-input" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="robot-cad-input">CAD 模型分享連結</label>
+              <input type="url" id="robot-cad-input" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="robot-code-input">GitHub 程式庫連結</label>
+              <input type="url" id="robot-code-input" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="robot-desc-input">機器人整體設計介紹</label>
+              <textarea id="robot-desc-input" class="form-control" required></textarea>
+            </div>
+            
+            <h4 style="margin: 2rem 0 1rem; color: var(--penguin-sky);">詳細技術諸元 (六個規格行)</h4>
+            <div id="robot-specs-fields-container">
+              <!-- Six specs fields generated dynamically -->
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem;">儲存機器人規格</button>
+          </form>
+        </div>
+
+        <!-- TAB CONTENT: Gallery Photos -->
+        <div class="admin-tab-panel" id="panel-gallery" style="display: none;">
+          <div class="admin-header-flex" style="margin-bottom: 2rem;">
+            <h3>相簿照片管理</h3>
+            <button class="btn btn-primary btn-small" id="admin-add-photo-btn">+ 新增活動照片</button>
+          </div>
+          <div class="admin-list glass-card" id="admin-gallery-list">
+            <!-- Dynamic photo items -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Photo Lightbox Modal -->
+  <div class="lightbox" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close-btn">&times;</button>
+      <div class="lightbox-image-wrapper">
+        <!-- SVG image placeholder in glassmorphic overlay for local mode -->
+        <div class="lightbox-image-placeholder">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0-2-.9-2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+          </svg>
+          <span style="font-family: var(--font-title);">照片展示區域 (發布後替換為實際圖片)</span>
+        </div>
+      </div>
+      <div class="lightbox-details">
+        <h3 class="lightbox-title" id="lightbox-title-text">活動照片名稱</h3>
+        <p class="lightbox-desc" id="lightbox-desc-text">活動相片敘述細節</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRUD Editing Overlay Modal -->
+  <div class="modal" id="admin-editor-modal">
+    <div class="glass-card modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title">新增/編輯項目</h3>
+        <button class="lightbox-close" id="modal-close-btn" style="position: static; font-size: 1.5rem;">&times;</button>
+      </div>
+      <form id="admin-editor-form">
+        <!-- Dynamically injected input elements depending on item type -->
+        <div id="modal-form-fields"></div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary btn-small" id="modal-cancel-btn">取消</button>
+          <button type="submit" class="btn btn-primary btn-small" id="modal-save-btn">儲存變更</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Notification Toast -->
+  <div class="toast" id="toast-notify">
+    <span class="toast-success-icon">✓</span>
+    <span id="toast-message">操作成功！</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo-flex">
+            <img src="logo.jpg" alt="Gammaland Logo" class="footer-logo-img">
+            <h3 class="footer-brand">FRC <span>Gammaland</span></h3>
+          </div>
+          <p class="footer-motto" id="footer-motto-text">載入中...</p>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-links-title">社群媒體</h4>
+          <div class="social-links-flex">
+            <a href="#" target="_blank" class="social-link" id="footer-social-instagram" aria-label="Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="#" target="_blank" class="social-link" id="footer-social-github" aria-label="GitHub">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.234c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.22.694.825.576C20.565 21.795 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" target="_blank" class="social-link" id="footer-social-email" aria-label="Email">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div id="footer-copyright">&copy; 2026 FRC Team 10034 Gammaland. All rights reserved.</div>
+        <div>Made with ❤️ for Gammaland Robotics</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
