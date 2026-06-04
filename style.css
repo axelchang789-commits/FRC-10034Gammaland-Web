@@ -35,6 +35,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  background-color: #060b10; /* 防止滑動過快或彈性滾動時出現底層白色色塊 */
+}
+
 body {
   background: linear-gradient(180deg, #102330 0%, #060b10 100%);
   background-attachment: fixed;
