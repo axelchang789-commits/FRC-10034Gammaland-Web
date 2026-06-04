@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       window.saveGammalandData(appData);
-      window.rebuildWebsiteViews();
+      if (typeof window.rebuildWebsiteViews === 'function') window.rebuildWebsiteViews();
       showToast('團隊基本資訊儲存成功！');
     });
   }
@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       window.saveGammalandData(appData);
-      window.rebuildWebsiteViews();
+      if (typeof window.rebuildWebsiteViews === 'function') window.rebuildWebsiteViews();
       showToast('機器人規格儲存成功！');
     });
   }
@@ -542,7 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Save & Update View
       window.saveGammalandData(appData);
-      window.rebuildWebsiteViews();
+      if (typeof window.rebuildWebsiteViews === 'function') window.rebuildWebsiteViews();
       closeEditor();
       showToast('項目儲存成功！');
     });
@@ -570,7 +570,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.saveGammalandData(appData);
-    window.rebuildWebsiteViews();
+    if (typeof window.rebuildWebsiteViews === 'function') window.rebuildWebsiteViews();
     showToast('項目刪除成功！');
   }
 
@@ -590,7 +590,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (confirm('警告！這將會清除您目前在瀏覽器中所有的修改，並重設回隊伍預設資料，確定要重設嗎？')) {
         localStorage.removeItem('gammaland_website_data');
         appData = window.getGammalandData();
-        window.rebuildWebsiteViews();
+        if (typeof window.rebuildWebsiteViews === 'function') window.rebuildWebsiteViews();
         window.initAdminPanel();
         showToast('資料已成功重設為預設配置！');
       }
@@ -651,5 +651,10 @@ window.saveGammalandData = function(data) {
         '"': '&quot;'
       }[tag] || tag)
     );
+  }
+
+  // Auto initialize if run as standalone admin page
+  if (window.location.pathname.endsWith('admin.html') || window.location.href.includes('admin.html')) {
+    window.initAdminPanel();
   }
 });

@@ -33,7 +33,6 @@
           <li><a href="#about" class="nav-item" id="nav-link-about">團隊介紹</a></li>
           <li><a href="#robot" class="nav-item" id="nav-link-robot">機器人技術</a></li>
           <li><a href="#gallery" class="nav-item" id="nav-link-gallery">活動照片</a></li>
-          <li><a href="#admin" class="nav-item" id="nav-link-admin">管理後台</a></li>
         </ul>
       </nav>
     </div>
@@ -205,157 +204,6 @@
     </section>
 
 
-    <!-- PAGE: ADMIN -->
-    <section id="page-admin" class="page-section" style="display: none;">
-      <div class="admin-container">
-        <div class="admin-header-flex">
-          <div>
-            <h2 class="section-title" style="text-align: left; margin-bottom: 0.5rem; display: inline-block;">後台管理系統</h2>
-            <p style="color: var(--text-muted);">在此處編輯網站內容，修改將即時套用在瀏覽器中。</p>
-          </div>
-          <div class="admin-actions">
-            <button class="btn btn-secondary" id="admin-export-btn">
-              ⬇️ 匯出資料檔案 (data.js)
-            </button>
-            <button class="btn btn-danger btn-small" id="admin-reset-btn" style="margin-left: 0.5rem;">
-              ⚠️ 重設為預設資料
-            </button>
-          </div>
-        </div>
-
-        <!-- Management Navigation Tabs -->
-        <div class="admin-tabs" id="admin-tabs">
-          <button class="admin-tab-btn active" data-tab="info">基本資訊</button>
-          <button class="admin-tab-btn" data-tab="sponsors">贊助商管理</button>
-          <button class="admin-tab-btn" data-tab="news">消息公告</button>
-          <button class="admin-tab-btn" data-tab="team">團員管理</button>
-          <button class="admin-tab-btn" data-tab="robot">機器人規格</button>
-          <button class="admin-tab-btn" data-tab="gallery">照片牆管理</button>
-        </div>
-
-        <!-- TAB CONTENT: Basic Info -->
-        <div class="admin-tab-panel glass-card" id="panel-info">
-          <h3>編輯團隊基本資訊</h3>
-          <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 1.5rem 0;">
-          <form id="form-team-info">
-            <div class="form-group">
-              <label for="info-name">隊伍名稱</label>
-              <input type="text" id="info-name" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="info-number">隊伍編號</label>
-              <input type="text" id="info-number" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="info-motto">隊伍精神隊呼 (Motto)</label>
-              <input type="text" id="info-motto" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="info-founded">成立年份</label>
-              <input type="text" id="info-founded" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="info-about">團隊詳細介紹</label>
-              <textarea id="info-about" class="form-control" required></textarea>
-            </div>
-            <div class="form-group">
-              <label for="info-instagram">Instagram 連結</label>
-              <input type="url" id="info-instagram" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="info-github">GitHub 組織連結</label>
-              <input type="url" id="info-github" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="info-email">聯絡信箱 (Email)</label>
-              <input type="email" id="info-email" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">儲存基本資訊</button>
-          </form>
-        </div>
-
-        <!-- TAB CONTENT: Sponsors -->
-        <div class="admin-tab-panel" id="panel-sponsors" style="display: none;">
-          <div class="admin-header-flex" style="margin-bottom: 2rem;">
-            <h3>贊助商名單</h3>
-            <button class="btn btn-primary btn-small" id="admin-add-sponsor-btn">+ 新增贊助商</button>
-          </div>
-          <div class="admin-list glass-card" id="admin-sponsors-list">
-            <!-- Dynamic sponsor items -->
-          </div>
-        </div>
-
-        <!-- TAB CONTENT: News -->
-        <div class="admin-tab-panel" id="panel-news" style="display: none;">
-          <div class="admin-header-flex" style="margin-bottom: 2rem;">
-            <h3>最新公告</h3>
-            <button class="btn btn-primary btn-small" id="admin-add-news-btn">+ 發布新公告</button>
-          </div>
-          <div class="admin-list glass-card" id="admin-news-list">
-            <!-- Dynamic news items -->
-          </div>
-        </div>
-
-        <!-- TAB CONTENT: Team Members -->
-        <div class="admin-tab-panel" id="panel-team" style="display: none;">
-          <div class="admin-header-flex" style="margin-bottom: 2rem;">
-            <h3>成員與導師名冊</h3>
-            <button class="btn btn-primary btn-small" id="admin-add-member-btn">+ 新增成員/導師</button>
-          </div>
-          <div class="admin-list glass-card" id="admin-members-list">
-            <!-- Dynamic member items -->
-          </div>
-        </div>
-
-        <!-- TAB CONTENT: Robot Specs -->
-        <div class="admin-tab-panel glass-card" id="panel-robot" style="display: none;">
-          <h3>編輯機器人規格諸元</h3>
-          <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 1.5rem 0;">
-          <form id="form-robot-specs">
-            <div class="form-group">
-              <label for="robot-name-input">機器人名稱</label>
-              <input type="text" id="robot-name-input" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="robot-year-input">賽季年份</label>
-              <input type="text" id="robot-year-input" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="robot-cad-input">CAD 模型分享連結</label>
-              <input type="url" id="robot-cad-input" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="robot-code-input">GitHub 程式庫連結</label>
-              <input type="url" id="robot-code-input" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="robot-desc-input">機器人整體設計介紹</label>
-              <textarea id="robot-desc-input" class="form-control" required></textarea>
-            </div>
-            
-            <h4 style="margin: 2rem 0 1rem; color: var(--penguin-sky);">詳細技術諸元 (六個規格行)</h4>
-            <div id="robot-specs-fields-container">
-              <!-- Six specs fields generated dynamically -->
-            </div>
-            
-            <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem;">儲存機器人規格</button>
-          </form>
-        </div>
-
-        <!-- TAB CONTENT: Gallery Photos -->
-        <div class="admin-tab-panel" id="panel-gallery" style="display: none;">
-          <div class="admin-header-flex" style="margin-bottom: 2rem;">
-            <h3>相簿照片管理</h3>
-            <button class="btn btn-primary btn-small" id="admin-add-photo-btn">+ 新增活動照片</button>
-          </div>
-          <div class="admin-list glass-card" id="admin-gallery-list">
-            <!-- Dynamic photo items -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-
   </main>
 
   <!-- Photo Lightbox Modal -->
@@ -378,29 +226,8 @@
     </div>
   </div>
 
-  <!-- CRUD Editing Overlay Modal -->
-  <div class="modal" id="admin-editor-modal">
-    <div class="glass-card modal-content">
-      <div class="modal-header">
-        <h3 id="modal-title">新增/編輯項目</h3>
-        <button class="lightbox-close" id="modal-close-btn" style="position: static; font-size: 1.5rem;">&times;</button>
-      </div>
-      <form id="admin-editor-form">
-        <!-- Dynamically injected input elements depending on item type -->
-        <div id="modal-form-fields"></div>
-        <div class="form-actions">
-          <button type="button" class="btn btn-secondary btn-small" id="modal-cancel-btn">取消</button>
-          <button type="submit" class="btn btn-primary btn-small" id="modal-save-btn">儲存變更</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
   <!-- Success Notification Toast -->
-  <div class="toast" id="toast-notify">
-    <span class="toast-success-icon">✓</span>
-    <span id="toast-message">操作成功！</span>
-  </div>
+  <!-- Modals and toasts removed from public page, hosted in admin.html -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -438,6 +265,5 @@
   <!-- Scripts -->
   <script src="data.js"></script>
   <script src="app.js"></script>
-  <script src="admin.js"></script>
 </body>
 </html>
