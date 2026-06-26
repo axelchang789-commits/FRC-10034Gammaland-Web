@@ -173,7 +173,7 @@ window.GammalandDefaultData = {
       "id": "gal-1",
       "title": "機構組組裝機器人底盤",
       "category": "build",
-      "url": "gallery_build1.jpg",
+      "url": "logo.jpg",
       "description": "團員們正在進行 Swerve 底盤的精準組裝與配線測試。"
     },
     {
